@@ -22,7 +22,7 @@
 
 		var iframe = $('iframe');
 		setTimeout(function() {
-			iframe.ready(function() {
+
 		        var container = iframe.contents().find(".swiper-container")[0],
 		        	pagination = iframe.contents().find(".pagination")[0];
 
@@ -33,8 +33,8 @@
 				    },
 					touchEventsTarget: container
 				})
-		    });
-		}, 500);
+		    
+		}, 1000);
 		
 	});
   
