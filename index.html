@@ -21,19 +21,21 @@
 	$(document).ready(function($) {
 
 		var iframe = $('iframe');
+		setTimeout(function() {
+			iframe.ready(function() {
+		        var container = iframe.contents().find(".swiper-container")[0],
+		        	pagination = iframe.contents().find(".pagination")[0];
 
-		iframe.ready(function() {
-	        var container = iframe.contents().find(".swiper-container")[0],
-	        	pagination = iframe.contents().find(".pagination")[0];
-
-			var mySwiper = new Swiper( container, {
-				pagination: {
-			      el: pagination,
-			      clickable: true
-			    },
-				touchEventsTarget: container
-			})
-	    });
+				var mySwiper = new Swiper( container, {
+					pagination: {
+				      el: pagination,
+				      clickable: true
+				    },
+					touchEventsTarget: container
+				})
+		    });
+		}, 500);
+		
 	});
   
 </script>
